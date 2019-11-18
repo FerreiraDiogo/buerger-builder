@@ -19,5 +19,9 @@ const modal = (props) =>{
     );
 };
 
+function areEqual(prevProps,nextProps){
+    return prevProps === nextProps;
+}
 
-export default modal;
+
+export default React.memo(modal,areEqual);
