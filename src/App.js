@@ -1,7 +1,6 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import Layout from "../src/components/Layout/Layout";
+import Layout from "./components/UI/Layout/Layout";
 import BurguerBuilder from "./conteiners/BurgerBuilder/BurgerBuilder"
 
 function App() {

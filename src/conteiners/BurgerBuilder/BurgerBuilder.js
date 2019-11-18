@@ -1,7 +1,7 @@
 import React ,{Component,Fragment}from 'react';
 import Burger from "../../components/Burger/Burger";
 import BuildControls from "../../components/Burger/BuildControls/BuildControls";
-import Modal from "../../components/Modal/Modal";
+import Modal from "../../components/UI/Modal/Modal";
 import OrderSummary from "../../components/Burger/OrderSummary/OrderSummary";
 
 
@@ -80,6 +80,9 @@ class BurgerBuilder extends Component  {
     backdropHandler = () =>{
         this.setState({purchasing:false})
     }
+    purchaseContinueHandler = ()=>{
+        alert("Du hast comprado this scheisse")
+    }
     render() {
         const disabledInfo = {
             ...this.state.ingredients
@@ -94,7 +97,10 @@ class BurgerBuilder extends Component  {
                 
                 <Modal show = {this.state.purchasing}
                        clicked = {this.backdropHandler}>
-                    <OrderSummary ingredients = {this.state.ingredients}></OrderSummary>
+                    <OrderSummary ingredients = {this.state.ingredients}
+                                  total = {this.state.totalPrice} 
+                                  clicked={this.backdropHandler}
+                                  continue={this.purchaseContinueHandler}></OrderSummary>
                 </Modal>
                 <Burger ingredients = {this.state.ingredients}/>
                 <BuildControls ingredientsAdded = {this.addIngredientHandler} 

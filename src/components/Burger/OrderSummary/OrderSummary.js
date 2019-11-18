@@ -1,5 +1,6 @@
 import React, {Fragment}from 'react';
 import styles from './OrderSummary.module.css';
+import Button from "../../UI/Button/Button"
 
 
 const orderSummary = (props) =>{
@@ -16,7 +17,10 @@ const orderSummary = (props) =>{
             <ul>
                 {ingredientSummary}
             </ul>
+            <span><strong>Total do pedido: ${props.total.toFixed(2)}</strong></span>
             <p>Continue to checkout?</p>
+            <Button clicked={props.clicked} btnType = "Danger">Cancel</Button>           
+            <Button clicked={props.continue} btnType = "Success">Continue</Button>           
         </Fragment>
         
     );
