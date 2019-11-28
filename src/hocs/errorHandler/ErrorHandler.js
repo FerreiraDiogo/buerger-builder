@@ -1,4 +1,6 @@
-import React,{Fragment,useEffect,useState,Component} from 'react';
+//import React,{Fragment,useEffect,useState,Component} from 'react';
+import React,{Fragment,Component} from 'react';
+
 //import styles from './nomeComponente.module.css';
 import Modal from "../../components/UI/Modal/Modal"
 
